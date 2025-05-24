@@ -1,0 +1,130 @@
+/*
+Theme Name: Yurtdisi Basin
+Theme URI: https://example.com/yurtdisi-basin
+Author: Your Name
+Author URI: https://example.com
+Description: A WordPress theme converted from HTML/CSS/JS project
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: yurtdisibasin
+*/
+
+/* Basic styles for WordPress compatibility */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignleft {
+  float: left;
+  margin: 0.5em 1em 0.5em 0;
+}
+.alignright {
+  float: right;
+  margin: 0.5em 0 0.5em 1em;
+}
+.wp-caption {
+  max-width: 100%;
+}
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/* Eklenen Loading göstergesi stili */
+.table-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3b82f6;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* İletişim sütunu stili - sıralama olmayan sütunlarda kullanılabilir */
+#mediaTable th:last-child,
+th[data-dt-column="6"],
+.dt-ordering-asc[data-dt-column="6"],
+.dt-ordering-desc[data-dt-column="6"],
+.no-sort,
+th.dt-nosorting,
+.sorting_disabled,
+#mediaTable thead th:nth-child(7) {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+    cursor: default !important;
+}
+
+#mediaTable th:last-child:hover,
+th[data-dt-column="6"]:hover,
+.no-sort:hover,
+th.dt-nosorting:hover,
+.sorting_disabled:hover,
+#mediaTable thead th:nth-child(7):hover {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+/* DataTable sıralama ikonlarını gizle */
+th[data-dt-column="6"] .dt-column-order,
+.dt-ordering-asc[data-dt-column="6"] .dt-column-order,
+.dt-ordering-desc[data-dt-column="6"] .dt-column-order,
+.no-sort .dt-column-order,
+th.dt-nosorting .dt-column-order,
+.sorting_disabled .dt-column-order,
+#mediaTable thead th:nth-child(7) .dt-column-order,
+#mediaTable thead th:nth-child(7) .dt-column-order[role="button"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Veriler yükleniyor göstergesini gizle */
+.table-loading {
+    display: none !important;
+}
+
+/* Featured Grid Styles */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.featured-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+}
